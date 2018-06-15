@@ -1,3 +1,4 @@
+import { InfoService } from './../service/info.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  profile 
+  constructor(private info:InfoService){
+
+     this.info.getUsers().subscribe(profile =>{
+      this.profile = profile
+     })
+    
+   }
+ 
 }
